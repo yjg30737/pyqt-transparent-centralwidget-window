@@ -10,7 +10,7 @@ PyQt5 >= 5.15
 ```pip3 install git+https://github.com/yjg30737/pyqt-transparent-centralwidget-window.git --upgrade```
 
 ## Included package
-* <a href="https://github.com/yjg30737/pyqt-custom-titlebar-window.git">pyqt-custom-titlebar-window</a>
+* <a href="https://github.com/yjg30737/pyqt-custom-titlebar-window.git">pyqt-custom-titlebar-window</a> - Parent widget
 
 ## Example
 Code Sample
