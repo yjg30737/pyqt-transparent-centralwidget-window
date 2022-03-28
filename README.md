@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     example = TransparentCentralWidgetWindow(MainWindow())
-    example.setMinMaxCloseButton()
+    example.setButtons()
     example.show()
     app.exec_()
 ```
