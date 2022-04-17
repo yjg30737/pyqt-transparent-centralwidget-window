@@ -13,6 +13,7 @@ setup(
     url='https://github.com/yjg30737/pyqt-transparent-centralwidget-window.git',
     install_requires=[
         'PyQt5>=5.15',
-        'pyqt-custom-titlebar-window @ git+https://git@github.com/yjg30737/pyqt-custom-titlebar-window.git@main'
+        'pyqt-custom-titlebar-window @ git+https://git@github.com/yjg30737/pyqt-custom-titlebar-window.git@main',
+        'pyqt-top-titlebar-widget @ git+https://git@github.com/yjg30737/pyqt-top-titlebar-widget.git@main'
     ]
 )

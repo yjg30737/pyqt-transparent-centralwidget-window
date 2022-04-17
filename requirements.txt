@@ -1,1 +1,2 @@
 git+https://git@github.com/yjg30737/pyqt-custom-titlebar-window.git@main
+git+https://git@github.com/yjg30737/pyqt-top-titlebar-widget.git@main

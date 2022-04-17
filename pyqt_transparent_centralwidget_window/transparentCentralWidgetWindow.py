@@ -2,6 +2,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QPainter, QPen, QColor
 from PyQt5.QtWidgets import QMainWindow
 from pyqt_custom_titlebar_window import CustomTitlebarWindow
+from pyqt_top_titlebar_widget import TopTitleBarWidget
 
 
 class TransparentCentralWidgetWindow(CustomTitlebarWindow):
@@ -18,10 +19,18 @@ class TransparentCentralWidgetWindow(CustomTitlebarWindow):
     def paintEvent(self, e):
         painter = QPainter(self)
         # get the main window
-        main_window = self.layout().itemAt(0).widget()
-        # set the border color as same as menu bar color
-        color = main_window.menuBar().palette().color(QPalette.Base)
-        pen = QPen(QColor(color), self._margin * 2)
-        painter.setPen(pen)
-        painter.drawRect(self.rect())
+        widget = self.layout().itemAt(0).widget()
+        if isinstance(widget, QMainWindow):
+            # set the border color as same as menu bar color
+            color = widget.menuBar().palette().color(QPalette.Base)
+            pen = QPen(QColor(color), self._margin * 2)
+            painter.setPen(pen)
+            painter.drawRect(self.rect())
+        elif isinstance(widget, TopTitleBarWidget):
+            color = self.layout().itemAt(1).widget().menuBar().palette().color(QPalette.Base)
+            pen = QPen(QColor(color), self._margin * 2)
+            painter.setPen(pen)
+            painter.drawRect(self.rect())
+            widget.setStyleSheet(f'background-color: {color.name()}')
+            widget.setAutoFillBackground(True)
         return super().paintEvent(e)
