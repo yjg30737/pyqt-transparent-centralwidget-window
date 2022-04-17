@@ -11,6 +11,7 @@ PyQt5 >= 5.15
 
 ## Included package
 * <a href="https://github.com/yjg30737/pyqt-custom-titlebar-window.git">pyqt-custom-titlebar-window</a> - Parent widget
+* <a href="https://github.com/yjg30737/pyqt-top-titlebar-widget.git">pyqt-top-titlebar-widget</a>
 
 ## Example
 Code Sample
