@@ -20,17 +20,16 @@ class TransparentCentralWidgetWindow(CustomTitlebarWindow):
         painter = QPainter(self)
         # get the main window
         widget = self.layout().itemAt(0).widget()
+        # for menu bar only main window
         if isinstance(widget, QMainWindow):
-            # set the border color as same as menu bar color
             color = widget.menuBar().palette().color(QPalette.Base)
-            pen = QPen(QColor(color), self._margin * 2)
-            painter.setPen(pen)
-            painter.drawRect(self.rect())
+        # for top titlebar included main window
         elif isinstance(widget, TopTitleBarWidget):
             color = self.layout().itemAt(1).widget().menuBar().palette().color(QPalette.Base)
-            pen = QPen(QColor(color), self._margin * 2)
-            painter.setPen(pen)
-            painter.drawRect(self.rect())
             widget.setStyleSheet(f'background-color: {color.name()}')
             widget.setAutoFillBackground(True)
+        # set the border color as same as menu bar color
+        pen = QPen(QColor(color), self._margin * 2)
+        painter.setPen(pen)
+        painter.drawRect(self.rect())
         return super().paintEvent(e)
