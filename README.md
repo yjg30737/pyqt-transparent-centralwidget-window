@@ -9,7 +9,7 @@ PyQt5 >= 5.15
 ## Setup
 ```pip3 install git+https://github.com/yjg30737/pyqt-transparent-centralwidget-window.git --upgrade```
 
-## Included package
+## Included Package
 * <a href="https://github.com/yjg30737/pyqt-custom-titlebar-window.git">pyqt-custom-titlebar-window</a> - Parent widget
 * <a href="https://github.com/yjg30737/pyqt-top-titlebar-widget.git">pyqt-top-titlebar-widget</a>
 
@@ -46,6 +46,6 @@ Result
 
 ![image](https://user-images.githubusercontent.com/55078043/151266003-49e788a4-bdb9-4dfb-8475-027523774005.png)
 
-## Example by app
+## Example by App
 * <a href="https://github.com/yjg30737/pyqt-capturer.git">pyqt-capturer</a>
 
