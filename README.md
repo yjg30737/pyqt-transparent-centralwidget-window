@@ -1,6 +1,8 @@
 # pyqt-transparent-centralwidget-window
 PyQt window which can set the QMainWindow as main widget and make central widget of QMainWindow transparent. Simply put, frame with no image.
 
+Frame will be removed when full screen is being activated.
+
 This module directly inherits the <a href="https://github.com/yjg30737/pyqt-custom-titlebar-window.git">pyqt-custom-titlebar-window</a>.
 
 ## Requirements
