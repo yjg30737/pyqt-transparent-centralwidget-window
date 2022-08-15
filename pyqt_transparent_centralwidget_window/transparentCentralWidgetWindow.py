@@ -1,8 +1,7 @@
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPalette, QPainter, QPen, QColor
+from PyQt5.QtGui import QPainter, QPen, QColor
 from PyQt5.QtWidgets import QMainWindow
 from pyqt_custom_titlebar_window import CustomTitlebarWindow
-from pyqt_top_titlebar_widget import TopTitleBarWidget
 
 
 class TransparentCentralWidgetWindow(CustomTitlebarWindow):
@@ -26,13 +25,7 @@ class TransparentCentralWidgetWindow(CustomTitlebarWindow):
             painter.drawRect(self.rect())
         else:
             # for menu bar only main window
-            if isinstance(widget, QMainWindow):
-                color = widget.menuBar().palette().color(QPalette.Base)
-            # for top titlebar included main window
-            elif isinstance(widget, TopTitleBarWidget):
-                color = self.layout().itemAt(1).widget().menuBar().palette().color(QPalette.Base)
-                widget.setStyleSheet(f'background-color: {color.name()}')
-                widget.setAutoFillBackground(True)
+            color = self.getFrameColor()
             # set the border color as same as menu bar color
             pen = QPen(QColor(color), self._margin * 2)
             painter.setPen(pen)

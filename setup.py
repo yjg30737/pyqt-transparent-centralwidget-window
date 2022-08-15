@@ -22,7 +22,6 @@ setup(
     long_description=long_description,
     install_requires=[
         'PyQt5>=5.15',
-        'pyqt-custom-titlebar-window>=0.0.1',
-        'pyqt-top-titlebar-widget>=0.0.1'
+        'pyqt-custom-titlebar-window>=0.0.1'
     ]
 )
