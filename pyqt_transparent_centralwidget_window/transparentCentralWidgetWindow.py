@@ -17,8 +17,6 @@ class TransparentCentralWidgetWindow(CustomTitlebarWindow):
 
     def paintEvent(self, e):
         painter = QPainter(self)
-        # get the main window
-        widget = self.layout().itemAt(0).widget()
         if self.isFullScreen():
             pen = QPen(QColor(0, 0, 0, 0), self._margin * 2)
             painter.setPen(pen)
