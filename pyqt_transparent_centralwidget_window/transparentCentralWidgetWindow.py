@@ -1,7 +1,7 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPainter, QPen, QColor
 from PyQt5.QtWidgets import QMainWindow
-from pyqt_custom_titlebar_window import CustomTitlebarWindow
+from pyqt_custom_titlebar_window.customTitlebarWindow import CustomTitlebarWindow
 
 
 class TransparentCentralWidgetWindow(CustomTitlebarWindow):
